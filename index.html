@@ -90,17 +90,20 @@
     .price-big { font-size: 3.5rem; font-weight: bold; margin: 15px 0; }
     .price-small { font-size: 1.4rem; }
     .ingredients { background: #f0f7f4; text-align: center; }
-    .ingredients-list {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;
-    }
-    .ingredient {
-      background: white; padding: 15px 25px; border-radius: 30px; font-weight: bold;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
     .product-showcase { text-align: center; }
+    .product-images {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
     .product-img {
-      max-width: 100%; height: auto; border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin: 30px 0;
+      max-width: 100%;
+      max-height: 500px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      object-fit: contain;
     }
     .howto { background: var(--gris-fonce); color: white; }
     .howto ol { max-width: 700px; margin: 0 auto; font-size: 1.2rem; }
@@ -113,6 +116,7 @@
       .hero h1 { font-size: 2.2rem; }
       .cta-btn { padding: 14px 30px; font-size: 1.1rem; }
       .price-big { font-size: 2.8rem; }
+      .product-images { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -142,77 +146,72 @@
     <h2>Ce que disent nos clients</h2>
     <div class="testimonials">
       <div class="testimonial-card">
-        <div class="avatar">
-          <img src="https://thumbs.dreamstime.com/b/african-american-man-beard-confident-happy-big-natural-smile-laughing-isolated-over-white-background-young-116522309.jpg" alt="Client satisfait">
-        </div>
+        <div class="avatar"><img src="https://thumbs.dreamstime.com/b/african-american-man-beard-confident-happy-big-natural-smile-laughing-isolated-over-white-background-young-116522309.jpg" alt="Client"></div>
         <p>"Depuis que je prends KAMA BIO, je me sens plus fort et confiant. Ma femme est ravie ! Vraiment naturel et efficace."</p>
         <div class="name">– Kouadio M., Abidjan</div>
       </div>
       <div class="testimonial-card">
-        <div class="avatar">
-          <img src="https://img.freepik.com/free-photo/portrait-cheerful-man-smiling-looking-camera-studio-having-natural-facial-expressions-smile-confident-person-enjoying-happy-lifestyle-with-positive-emotion-studio_482257-35582.jpg" alt="Client satisfait">
-        </div>
+        <div class="avatar"><img src="https://img.freepik.com/free-photo/portrait-cheerful-man-smiling-looking-camera-studio-having-natural-facial-expressions-smile-confident-person-enjoying-happy-lifestyle-with-positive-emotion-studio_482257-35582.jpg" alt="Client"></div>
         <p>"Énergie au top toute la journée, et les résultats en chambre sont impressionnants. Merci KAMA BIO !"</p>
         <div class="name">– Serge K., Yopougon</div>
       </div>
       <div class="testimonial-card">
-        <div class="avatar">
-          <img src="https://thumbs.dreamstime.com/b/portrait-thumbs-up-black-man-studio-yes-thank-you-winning-hand-sign-green-background-winner-smile-model-isolated-385289964.jpg" alt="Client satisfait">
-        </div>
+        <div class="avatar"><img src="https://thumbs.dreamstime.com/b/portrait-thumbs-up-black-man-studio-yes-thank-you-winning-hand-sign-green-background-winner-smile-model-isolated-385289964.jpg" alt="Client"></div>
         <p>"Produit top qualité, fait ici en Côte d'Ivoire. Plus de fatigue, plus de performance. Je recommande à 100% !"</p>
         <div class="name">– Ibrahim T., Port-Bouët</div>
       </div>
     </div>
   </section>
 
-<section class="ingredients">
-  <h2>Ingrédients 100% naturels</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; margin: 40px 0;">
-    <div style="text-align: center;">
-      <img src="https://images.prismic.io/wellcomecollection/Z4fdFJbqstJ99f3t_YawAfrimGyebiKolaNut_0002.jpg?w=600&auto=compress" alt="Petit cola" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="margin-top: 12px; font-weight: bold; color: var(--vert);">Petit cola</p>
+  <section class="ingredients">
+    <h2>Ingrédients 100% naturels</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 25px; margin: 40px 0;">
+      <div style="text-align: center;">
+        <img src="https://images.prismic.io/wellcomecollection/Z4fdFJbqstJ99f3t_YawAfrimGyebiKolaNut_0002.jpg?w=600&auto=compress" alt="Petit cola" style="width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <p style="margin-top:12px; font-weight:bold; color:var(--vert);">Petit cola</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://thumbs.dreamstime.com/b/fresh-ginger-root-sliced-piece-close-up-one-dark-textured-background-393555771.jpg" alt="Gingembre" style="width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <p style="margin-top:12px; font-weight:bold; color:var(--vert);">Gingembre</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://cdn11.bigcommerce.com/s-28d9a/product_images/uploaded_images/tri-color-raw-maca-roots.jpg" alt="Maca" style="width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <p style="margin-top:12px; font-weight:bold; color:var(--vert);">Maca</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/06/vervain-1200x628-facebook-732x549.jpg" alt="Verveine" style="width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <p style="margin-top:12px; font-weight:bold; color:var(--vert);">Verveine</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://thumbs.dreamstime.com/b/clove-spice-closeup-isolated-white-background-100045886.jpg" alt="Clou de girofle" style="width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <p style="margin-top:12px; font-weight:bold; color:var(--vert);">Clou de girofle</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://thumbs.dreamstime.com/b/rosemary-bunch-fresh-isolated-white-herb-background-97761731.jpg" alt="Romarin" style="width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <p style="margin-top:12px; font-weight:bold; color:var(--vert);">Romarin</p>
+      </div>
+      <div style="text-align: center;">
+        <img src="https://c8.alamy.com/comp/F54FW0/mint-medicinal-herb-plant-foliage-closeup-mentha-green-fresh-leaves-F54FW0.jpg" alt="Feuille de menthe" style="width:100%; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+        <p style="margin-top:12px; font-weight:bold; color:var(--vert);">Feuille de menthe</p>
+      </div>
     </div>
-    
-    <div style="text-align: center;">
-      <img src="https://thumbs.dreamstime.com/b/fresh-ginger-root-sliced-piece-close-up-one-dark-textured-background-393555771.jpg" alt="Gingembre" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="margin-top: 12px; font-weight: bold; color: var(--vert);">Gingembre</p>
-    </div>
-    
-    <div style="text-align: center;">
-      <img src="https://cdn11.bigcommerce.com/s-28d9a/product_images/uploaded_images/tri-color-raw-maca-roots.jpg" alt="Maca" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="margin-top: 12px; font-weight: bold; color: var(--vert);">Maca</p>
-    </div>
-    
-    <div style="text-align: center;">
-      <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/06/vervain-1200x628-facebook-732x549.jpg" alt="Verveine" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="margin-top: 12px; font-weight: bold; color: var(--vert);">Verveine</p>
-    </div>
-    
-    <div style="text-align: center;">
-      <img src="https://thumbs.dreamstime.com/b/clove-spice-closeup-isolated-white-background-100045886.jpg" alt="Clou de girofle" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="margin-top: 12px; font-weight: bold; color: var(--vert);">Clou de girofle</p>
-    </div>
-    
-    <div style="text-align: center;">
-      <img src="https://thumbs.dreamstime.com/b/rosemary-bunch-fresh-isolated-white-herb-background-97761731.jpg" alt="Romarin" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="margin-top: 12px; font-weight: bold; color: var(--vert);">Romarin</p>
-    </div>
-    
-    <div style="text-align: center;">
-      <img src="https://c8.alamy.com/comp/F54FW0/mint-medicinal-herb-plant-foliage-closeup-mentha-green-fresh-leaves-F54FW0.jpg" alt="Feuille de menthe" style="width: 100%; max-height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="margin-top: 12px; font-weight: bold; color: var(--vert);">Feuille de menthe</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="product-showcase">
-  <h2>Découvre KAMA BIO</h2>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
-    <img src="sachet-mode-emploi.jpg" alt="Sachet KAMA BIO - Mode d'emploi et ingrédients" style="max-width: 350px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-    <img src="sachet-homme-muscle.jpg" alt="Sachet KAMA BIO - Boost énergie masculine" style="max-width: 350px; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-  </div>
-  <p>10 sachets – 30 g net – EXP Déc 2027</p>
-  <!-- Le bloc prix reste ici -->
+    <h2>Découvre KAMA BIO</h2>
+    <div class="product-images">
+      <img src="sachet-info.jpg" alt="Sachet KAMA BIO - Mode d'emploi et ingrédients" class="product-img">
+      <img src="sachet-boost.jpg" alt="Sachet KAMA BIO - Boost énergie masculine" class="product-img">
+    </div>
+    <p>10 sachets – 30 g net – EXP Déc 2027</p>
+
+    <div class="price-section">
+      <h3>Prix unique</h3>
+      <div class="price-big">5 000 FCFA</div>
+      <p class="price-small">Pour un paquet de 10 sachets – Livraison disponible à Abidjan</p>
+      <a href="https://wa.me/22505000213650?text=Bonjour%20!%20Je%20veux%20commander%20KAMA%20BIO%20à%205000%20FCFA" class="cta-btn" style="margin-top:20px;">Commander pour 5 000 FCFA</a>
+    </div>
+  </section>
 
   <section class="howto">
     <h2>Mode d'emploi simple</h2>
